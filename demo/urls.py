@@ -6,9 +6,9 @@ from core.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
-    path('accounts/signin', SignIn.as_view(), name='signin'),
+    path('accounts/signin/', SignIn.as_view(), name='signin'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('allauth.urls')),
     path('', include('core.urls'))
 ]
 
